@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - booking@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="booking">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="airline"/>
+    <schema id="3" name="cake_bookmarker"/>
+    <schema id="4" name="company"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="mysql"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="phpmyadmin"/>
+    <schema id="9" name="privileges"/>
+    <schema id="10" name="sys"/>
+    <schema id="11" name="user1db"/>
+    <schema id="12" name="user2db"/>
+    <schema id="13" name="webarena"/>
+    <table id="14" parent="1" name="BOOKINGS"/>
+    <table id="15" parent="1" name="ORDERS"/>
+    <table id="16" parent="1" name="PRICES"/>
+    <column id="17" parent="14" name="SEAT">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="18" parent="14" name="CLASS">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="19" parent="14" name="CUSTOMER">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <index id="20" parent="14" name="BOOKINGS_FK_CUSTOMER">
+      <columns>CUSTOMER</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="21" parent="14" name="PRIMARY">
+      <columns>SEAT</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="22" parent="14" name="BOOKINGS_FK_CUSTOMER">
+      <columns>CUSTOMER</columns>
+      <ref-key>~.ORDERS.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="23" parent="15" name="CUSTOMER">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="24" parent="15" name="AMOUNT">
+      <mandatory>1</mandatory>
+      <data-type>decimal(7,2)|0</data-type>
+    </column>
+    <column id="25" parent="15" name="ODATE">
+      <data-type>date|0</data-type>
+    </column>
+    <key id="26" parent="15" name="PRIMARY">
+      <columns>CUSTOMER</columns>
+      <primary>1</primary>
+    </key>
+    <column id="27" parent="16" name="CLASS">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="28" parent="16" name="PRICE">
+      <mandatory>1</mandatory>
+      <data-type>decimal(6,2)|0</data-type>
+    </column>
+    <key id="29" parent="16" name="PRIMARY">
+      <columns>CLASS</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
