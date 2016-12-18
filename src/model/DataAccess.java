@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class DataAccess {
 
-  // To keep the emthods' interface simple, we assume there are only two
+  // To keep the methods' interface simple, we assume there are only two
   // price classes: child and adult.
   public static final int CHILD = 1;
   public static final int ADULT = 2;

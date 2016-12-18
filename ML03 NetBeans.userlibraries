@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="mysql-connector-java-5.1.22-bin">
+    <archive path="/media/adrien/A48E22A08E226ACE/ECE/ING4/data_base/lab3/ML03 NetBeans/lib/mysql-connector-java-5.1.22-bin.jar" />
+  </library>
+  <library name="mysql-DefinitelyTyped">
+    <archive path="/home/adrien/.IntelliJIdea2016.2/config/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_mysql_mysql.d.ts" />
+  </library>
+</eclipse-userlibraries>
+
